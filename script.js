@@ -17,8 +17,6 @@ let lastY = 0;
 // Event listeners for mouse interactions
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
-    x = e.offsetX;
-    y = e.offsetY;
     [lastX, lastY] = [e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top];
 });
 
@@ -38,7 +36,6 @@ function draw(e) {
     [lastX, lastY] = [x, y];
 }
 
-// -------Js on zooming part--------------------------------------------------------------
 
 const zoomActionButtons = document.querySelectorAll('.zoom-action');
 const zoomLevelText = document.getElementById('zoomLevel');
